@@ -4,7 +4,9 @@
   "description": "Generate a model.coffee for a Sails app.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "model",
@@ -19,7 +21,8 @@
   "dependencies": {
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
-    "underscore.string": "~2.3.3"
+    "underscore.string": "~2.3.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "sails-generate": "*",
@@ -30,5 +33,6 @@
     "type": "model",
     "behavior": "overrides `sails generate model`",
     "sailsVersion": "~0.10.0"
-  }
+  },
+  "snyk": true
 }
